@@ -1,0 +1,28 @@
+.heading {
+    text-align: center;
+}
+
+.student-form {
+    margin: auto;
+    width: 20%;
+}
+
+.student-form button,
+.student-form input:not([type="radio"]) {
+    display: block;
+    margin-block: 1rem;
+    width: 100%;
+    height: 3rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex button {
+    width: 50px;
+    margin: auto;
+}
+.required-text{
+    color: red;
+}
