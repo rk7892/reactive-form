@@ -17,7 +17,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'forms';
 
   // showPassword = false;
@@ -25,8 +25,17 @@ export class AppComponent  {
 
   myReactiveForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    email: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{1,4}$')]),
-    password: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$')]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{1,4}$'),
+    ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.pattern(
+        '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$'
+      ),
+    ]),
     dob: new FormControl('', [Validators.required]),
     passwordVisibility: new FormControl(''),
     Address: new FormArray([new FormControl('Addr1')], [Validators.required]),

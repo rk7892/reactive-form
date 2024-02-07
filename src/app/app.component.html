@@ -20,7 +20,8 @@
   </div>
 
   <div>
-    <input formControlName="password" name="password" placeholder="*******" [type]="myReactiveForm.controls.passwordVisibility.value === 'show' ? 'text' :'password'">
+    <input formControlName="password" name="password" placeholder="*******"
+      [type]="myReactiveForm.controls.passwordVisibility.value === 'show' ? 'text' :'password'">
     <ng-container *ngIf="myReactiveForm.controls.password.touched">
       <span class="required-text" *ngIf="myReactiveForm.controls.password.errors?.['required']">
         please fill the password field</span>
